@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://de7acg3sqv3nf"
+path="res://.godot/imported/adventurer-bow.aseprite-60600fafc5b4583d72507ed706fa03c8.res"
+
+[deps]
+
+source_file="res://assets/player/adventurer-bow.aseprite"
+dest_files=["res://.godot/imported/adventurer-bow.aseprite-60600fafc5b4583d72507ed706fa03c8.res"]
+
+[params]
+

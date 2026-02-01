@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dt2ce2qvlqgsd"]
+
+[node name="player" type="CharacterBody2D" unique_id=273163078]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1064255769]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=990596219]
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/player/adventurer.aseprite",
+"source_uid": 1464097038875502886
+}
