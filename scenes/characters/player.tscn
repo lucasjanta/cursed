@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dt2ce2qvlqgsd"]
 
+[ext_resource type="Script" uid="uid://ic1hoyufulmp" path="res://scripts/player.gd" id="1_76oj4"]
 [ext_resource type="Script" uid="uid://dmka56m57fde5" path="res://scripts/state_machines/state_machine.gd" id="1_rp718"]
 [ext_resource type="Script" uid="uid://ctjnuwmvkbj0t" path="res://scripts/state_machines/player_states/idle_state.gd" id="2_yewv4"]
 
@@ -1434,6 +1435,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=273163078]
+script = ExtResource("1_76oj4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1064255769]
 position = Vector2(0, 3)
@@ -1467,6 +1469,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "4c8fdc9e299d9622e3652828c75e87fa"
 
 [node name="StateMachine" type="Node" parent="." unique_id=9194781]
 script = ExtResource("1_rp718")
+initial_state_path = NodePath("IdleState")
 
 [node name="IdleState" type="Node" parent="StateMachine" unique_id=832488291]
 script = ExtResource("2_yewv4")
