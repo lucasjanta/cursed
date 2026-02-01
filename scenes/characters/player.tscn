@@ -1,5 +1,8 @@
 [gd_scene format=4 uid="uid://dt2ce2qvlqgsd"]
 
+[ext_resource type="Script" uid="uid://dmka56m57fde5" path="res://scripts/state_machines/state_machine.gd" id="1_rp718"]
+[ext_resource type="Script" uid="uid://ctjnuwmvkbj0t" path="res://scripts/state_machines/player_states/idle_state.gd" id="2_yewv4"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wocps"]
 size = Vector2(12, 28)
 
@@ -1461,3 +1464,9 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 1464097038875502886
 }
 metadata/_aseprite_wizard_source_file_hash_ = "4c8fdc9e299d9622e3652828c75e87fa"
+
+[node name="StateMachine" type="Node" parent="." unique_id=9194781]
+script = ExtResource("1_rp718")
+
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=832488291]
+script = ExtResource("2_yewv4")
