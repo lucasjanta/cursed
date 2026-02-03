@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://ic1hoyufulmp" path="res://scripts/player.gd" id="1_76oj4"]
 [ext_resource type="Script" uid="uid://dmka56m57fde5" path="res://scripts/state_machines/state_machine.gd" id="1_rp718"]
 [ext_resource type="Script" uid="uid://ctjnuwmvkbj0t" path="res://scripts/state_machines/player_states/idle_state.gd" id="2_yewv4"]
+[ext_resource type="Script" uid="uid://bfjvv3cg7nudw" path="res://scripts/state_machines/player_states/walk_state.gd" id="4_dyp2m"]
+[ext_resource type="Script" uid="uid://dbyldx3djr8t5" path="res://scripts/state_machines/player_states/jump_state.gd" id="5_atpat"]
+[ext_resource type="Script" uid="uid://drepqgvbtylin" path="res://scripts/state_machines/player_states/wall_jump_state.gd" id="6_kqtwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wocps"]
 size = Vector2(12, 28)
@@ -909,7 +912,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nktl3")
 }],
-"loop": true,
+"loop": false,
 "name": &"crnr-jmp",
 "speed": 10.0
 }, {
@@ -1108,7 +1111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uinop")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 10.0
 }, {
@@ -1444,7 +1447,7 @@ shape = SubResource("RectangleShape2D_wocps")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=990596219]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ed6ye")
-animation = &"idle"
+animation = &"crnr-jmp"
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -1473,3 +1476,12 @@ initial_state_path = NodePath("IdleState")
 
 [node name="IdleState" type="Node" parent="StateMachine" unique_id=832488291]
 script = ExtResource("2_yewv4")
+
+[node name="WalkState" type="Node" parent="StateMachine" unique_id=1652399368]
+script = ExtResource("4_dyp2m")
+
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=202285555]
+script = ExtResource("5_atpat")
+
+[node name="WallJumpState" type="Node" parent="StateMachine" unique_id=1421519880]
+script = ExtResource("6_kqtwu")
